@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <title>Chameleon</title>
+
+    <!-- ::::::LINKS:::::: -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- :::::ICONS LINK FROM LOCAL TEMPLATE SOURCE OFFLINE:::::: -->
+	<link rel="stylesheet" href="file:///C:/Users/User/Desktop/iTins/icons/fontawesome-free-6.1.1-web/css/all.css">
+
+    <!-- :::::::::::ICONS-LINK ONLINE:::::::::::::::::: -->
+    <script src="https://kit.fontawesome.com/2bbbf54a3f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+
+<section>
+    <aside id="navMenu">
+        <nav>
+            <i class="fas fa-times" id="close" onclick="hideMenu()"></i>
+
+            <div class="logo">
+                <img src="./logo.svg" alt="">
+                <h1>Chameleon</h1>
+            </div>
+
+            <a href=""><i class="fa-solid fa-database"></i> open data library</a>
+            <a href=""><i class="fa-solid fa-cloud-arrow-up"></i> data contribution</a>
+            <a href=""><i class="fa-solid fa-microchip"></i> Bacalhau COD</a>
+            <a href=""><i class="far fa-folder"></i> data manager</a>
+            <a href="" class="active"><i class="fas fa-cogs"></i> IPFS Configuration</a>
+
+        </nav>
+    </aside>
+
+
+    <div class="container">
+        <div class="wallet-details">
+            <div class="menu-icon">
+                <i class="fas fa-bars" id="open" onclick="showMenu()"></i>
+            </div>
+            <div class="wallet-add">
+                <img src="./add-logo.svg" alt="">
+                <p>0x4D0A...E7C96</p>
+            </div>
+            
+        </div>
+        <div class="content">
+            <h1>
+                IPFS Configuration
+            </h1>
+
+            <p>
+                Before contributing topography data to Chameleon, you need to configure your IPFS storage tool. The IPFS storage tool will be use to store your topography data, metadata, additional files, and Bacalhau COD computation result. Currently, Chameleon only supports Pinata.
+            </p>
+
+            <form action="" method="POST">
+                <div class="form-input">
+                    <label for="">Pinata API Key</label>
+                    <input type="text" name="api-key">
+                </div>
+
+                <div class="form-input">
+                    <label for="">Pinata API Secret</label>
+                    <input type="text" name="api-secret">
+                </div>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    const navMenu = document.getElementById("navMenu");
+    const menuShow = document.getElementById("show");
+    const menuHide = document.getElementById("close");
+
+
+    function showMenu(){
+        navMenu.style.left = "0";
+    }
+    function hideMenu(){
+        navMenu.style.left = "";
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    position: relative;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+/* :::::::::USING THE MOBILE FIRST APPROACH::::::::::  */
+section{
+    width: 100%;
+    position: relative;
+}
+.container{
+    padding: 1em 0;
+    width: 80%;
+    margin: 0 auto;
+}
+aside{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30em;
+    width: 20em;
+    padding: 1em 0;
+    height: 100vh;
+    z-index: 10;
+    background: #FFFFFF;
+    box-shadow: -2px 4px 15px -3px rgba(0, 0, 0, 0.25);
+    transition: all 1s ease;
+}
+nav{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+nav .logo {
+    text-align: center;
+    padding: 1em 0;
+}
+nav .logo h1{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #4A9EA1;
+}
+nav a{
+    min-width: 90%;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #313131;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: .5em 1em;
+    border-radius: 3px;
+    margin: .5em auto;
+    transition: all .7s ease;
+}
+nav a:hover, nav a.active{
+    background: #4A9EA1;
+    color: #fff;
+}
+nav a:hover i,nav a.active i{
+    color: #fff;
+}
+.wallet-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1em 0;
+    color: #919191;
+}
+.wallet-details .menu-icon i, i{
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #919191;
+    padding: .5em;
+}
+.wallet-add{
+    /* background-color: black; */
+    width: 10em;
+    padding: .3em .5em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: .5em;
+   box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}
+.content h1{
+    width: fit-content;
+    padding: .2em 0;
+    border-bottom: 3px solid #4A9EA1;
+    position: relative;
+}
+.content p{
+    padding: 1em 0;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 400;
+    color: #919191;
+}
+.content form{
+    width: 100%;
+}
+form .form-input{
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: .5em 0;
+}
+.form-input label{
+    padding: .2em 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #313131;
+}
+.form-input input{
+    padding: .3em .5em;
+    font-size: 1em;
+    color: #919191;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #E1E1E1;
+    border-radius: 3px;
+}
+form input[type=submit]{
+    margin: .5em 0;
+    background: #4A9EA1;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    padding: .6em 1em;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+form input[type=submit]:hover{
+    box-shadow: 0 3px 8px rgba(0,0,0,.25);
+}
+
+
+@media (min-width: 980px){
+    section{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .container{
+        width: 63%;
+    }
+    .wallet-details{
+        justify-content: flex-end;
+        align-items: flex-end;
+
+    }
+    .wallet-details .menu-icon, #close {
+        display: none;
+    }
+    .content form{
+        width: 80%;
+    }
+    aside{
+        position: relative;
+        top: unset;
+        left: unset;
+        bottom: unset;
+        z-index: unset;
+    }
+}
+
+@media (min-width:700px) and (max-width:980px){
+    section{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .container{
+        width: 50%;
+    }
+    .wallet-details{
+        justify-content: flex-end;
+        align-items: flex-end;
+
+    }
+    .wallet-details .menu-icon, #close {
+        display: none;
+    }
+    .content form{
+        width: 80%;
+    }
+    aside{
+        position: relative;
+        top: unset;
+        left: unset;
+        bottom: unset;
+        z-index: unset;
+    }
+}
